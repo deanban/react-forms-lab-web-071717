@@ -13,7 +13,8 @@ class PoemWriter extends React.Component {
   handleChange = event => {
     this.setState({
       value: event.target.value,
-      poemText: event.target.value   
+      poemText: event.target.value
+      //debugger
     }) 
     
     
@@ -21,6 +22,7 @@ class PoemWriter extends React.Component {
 
   valid() {
     var lines = this.state.value.split("\n")
+    //debugger
     
     if (lines[0]) {
       
@@ -33,6 +35,7 @@ class PoemWriter extends React.Component {
       var words2 = line2.split(' ').length  
           
     }
+    //debugger
     if (lines[2]) {
       var line3 = lines[2].trim()
       var words3 = line3.split(' ').length  
@@ -40,6 +43,7 @@ class PoemWriter extends React.Component {
     }
     
     console.log('lines.length', lines.length)
+    //debugger
 
     if (lines.length === 3 && (words1 ===5 && words2 === 3 && words3 === 5)) {
       return true
